@@ -1,9 +1,11 @@
 import 'dart:io';
 
 void main() {
+  // Declaração de variáveis.
   double valortotal = 0.0;
   int quantidade = 0;
 
+  // Exibição do cardápio da loja.
   stdout.write('| ———————————————————————————————————— |\n');
   stdout.write('| —————————Cardapio da Loja——————————— |\n');
   stdout.write('| ———————————————————————————————————— |\n');
@@ -17,11 +19,13 @@ void main() {
   stdout.write('| ———Refrigerante | 106 | R\$ 10.00——— |\n');
   stdout.write('| ———————————————————————————————————— |\n'); 
 
+  // Coleta do código do produto escolhido pelo usuário e da quantidade desejada.
   stdout.write('Digite o código do produto desejado: ');
   int codigoproduto = int.parse(stdin.readLineSync()!);
   stdout.write('Digite a quantidade desejada: ');
   quantidade = int.parse(stdin.readLineSync()!);
 
+  // Cálculo do valor total a ser pago com base no código do produto escolhido pelo usuário e na quantidade desejada, exibindo o valor total a ser pago.
   stdout.write('O valor total a ser pago é: ');
   switch (codigoproduto) {
     case 101:
@@ -47,5 +51,6 @@ void main() {
       return;
   }
 
+  // Exibição do valor total a ser pago.
   stdout.write('R\$ $valortotal reais.');
 }
