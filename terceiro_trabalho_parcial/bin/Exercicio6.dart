@@ -15,4 +15,6 @@ void main() {
       stdout.writeln('A quantidade de palavras digitadas é: $contador');
     }
   }
+
+  return;
 }
